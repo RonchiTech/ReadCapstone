@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Read Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Read University</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login </button>
+    <br>
+    <button onclick="register_account()">Create New Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+  <h3>Welcome User</h3>
+  <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+    <br>
+    <button id=verify_btn onclick="send_verification()">Send Verification</button>
+  </div>
+
+  <div id="register_div" class="main-div">
+    <h3>Register</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+    <button onclick="create_account()">Register Account</button>
+    </br>
+    <button onclick="back_account()">Back</button>
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBBfUML5q_-TEl3aOX-yzNhmbIHvQ6FHP8",
+    authDomain: "capstone-abea9.firebaseapp.com",
+    databaseURL: "https://capstone-abea9.firebaseio.com",
+    projectId: "capstone-abea9",
+    storageBucket: "capstone-abea9.appspot.com",
+    messagingSenderId: "512230966749"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="index.js"></script>
+
+</body>
+</html>
